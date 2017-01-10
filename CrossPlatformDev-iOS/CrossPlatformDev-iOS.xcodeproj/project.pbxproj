@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0924443D1E2451B900E9A5A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924443C1E2451B900E9A5A2 /* AppDelegate.swift */; };
-		0924443F1E2451B900E9A5A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924443E1E2451B900E9A5A2 /* ViewController.swift */; };
+		0924443F1E2451B900E9A5A2 /* LoginRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924443E1E2451B900E9A5A2 /* LoginRegisterViewController.swift */; };
 		092444421E2451B900E9A5A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 092444401E2451B900E9A5A2 /* Main.storyboard */; };
 		092444441E2451B900E9A5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 092444431E2451B900E9A5A2 /* Assets.xcassets */; };
 		092444471E2451B900E9A5A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 092444451E2451B900E9A5A2 /* LaunchScreen.storyboard */; };
 		092444521E2451B900E9A5A2 /* CrossPlatformDev_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092444511E2451B900E9A5A2 /* CrossPlatformDev_iOSTests.swift */; };
 		0924445D1E2451B900E9A5A2 /* CrossPlatformDev_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924445C1E2451B900E9A5A2 /* CrossPlatformDev_iOSUITests.swift */; };
 		0924446B1E24527C00E9A5A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0924446A1E24527C00E9A5A2 /* GoogleService-Info.plist */; };
+		092A84E11E247F050050A85E /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A84E01E247F050050A85E /* FirebaseManager.swift */; };
 		48C7A35FB5AE72DB1679AFD2 /* Pods_CrossPlatformDev_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 968DF9B3221AB9190B6F2095 /* Pods_CrossPlatformDev_iOSUITests.framework */; };
 		98E5D5E75F2DA36BAEF2F285 /* Pods_CrossPlatformDev_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E4B23BAA7BE8B735E67F0E /* Pods_CrossPlatformDev_iOSTests.framework */; };
 		C660AAFE8F9A51F8D70D6113 /* Pods_CrossPlatformDev_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC1402FEF9CD157A0C6B072 /* Pods_CrossPlatformDev_iOS.framework */; };
@@ -40,7 +41,7 @@
 /* Begin PBXFileReference section */
 		092444391E2451B900E9A5A2 /* CrossPlatformDev-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CrossPlatformDev-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0924443C1E2451B900E9A5A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0924443E1E2451B900E9A5A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0924443E1E2451B900E9A5A2 /* LoginRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewController.swift; sourceTree = "<group>"; };
 		092444411E2451B900E9A5A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		092444431E2451B900E9A5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		092444461E2451B900E9A5A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +53,7 @@
 		0924445C1E2451B900E9A5A2 /* CrossPlatformDev_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossPlatformDev_iOSUITests.swift; sourceTree = "<group>"; };
 		0924445E1E2451B900E9A5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0924446A1E24527C00E9A5A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		092A84E01E247F050050A85E /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		32BEF15BA88AECA2C531DB87 /* Pods-CrossPlatformDev-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossPlatformDev-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrossPlatformDev-iOSTests/Pods-CrossPlatformDev-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		51E4B23BAA7BE8B735E67F0E /* Pods_CrossPlatformDev_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrossPlatformDev_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53108C2833C2C1E055D3EBDB /* Pods-CrossPlatformDev-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossPlatformDev-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrossPlatformDev-iOS/Pods-CrossPlatformDev-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,8 +118,10 @@
 		0924443B1E2451B900E9A5A2 /* CrossPlatformDev-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				092A84DF1E247D240050A85E /* Views */,
+				092A84DE1E247D110050A85E /* Models */,
+				092A84DD1E247D050050A85E /* Controllers */,
 				0924443C1E2451B900E9A5A2 /* AppDelegate.swift */,
-				0924443E1E2451B900E9A5A2 /* ViewController.swift */,
 				092444401E2451B900E9A5A2 /* Main.storyboard */,
 				092444431E2451B900E9A5A2 /* Assets.xcassets */,
 				092444451E2451B900E9A5A2 /* LaunchScreen.storyboard */,
@@ -143,6 +147,29 @@
 				0924445E1E2451B900E9A5A2 /* Info.plist */,
 			);
 			path = "CrossPlatformDev-iOSUITests";
+			sourceTree = "<group>";
+		};
+		092A84DD1E247D050050A85E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0924443E1E2451B900E9A5A2 /* LoginRegisterViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		092A84DE1E247D110050A85E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				092A84E01E247F050050A85E /* FirebaseManager.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		092A84DF1E247D240050A85E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		3D4A3697951DBAB63979C843 /* Pods */ = {
@@ -450,7 +477,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0924443F1E2451B900E9A5A2 /* ViewController.swift in Sources */,
+				092A84E11E247F050050A85E /* FirebaseManager.swift in Sources */,
+				0924443F1E2451B900E9A5A2 /* LoginRegisterViewController.swift in Sources */,
 				0924443D1E2451B900E9A5A2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
