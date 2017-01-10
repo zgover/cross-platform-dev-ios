@@ -1,0 +1,6 @@
+framework module Pods_CrossPlatformDev_iOS {
+  umbrella header "Pods-CrossPlatformDev-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_CrossPlatformDev_iOSUITests {
+  umbrella header "Pods-CrossPlatformDev-iOSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
