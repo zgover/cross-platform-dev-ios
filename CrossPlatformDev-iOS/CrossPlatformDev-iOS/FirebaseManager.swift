@@ -12,11 +12,13 @@ import FirebaseDatabase
 
 class FirebaseManager {
 
-	static var fbAuth:FIRAuth!
-	static var fbDatabase:FIRDatabase!
+	private static var TAG = "FirebaseManager";
+
+	private static var fbAuth:FIRAuth!
+	private static var fbDatabase:FIRDatabase!
 
 	public static func getFbAuth() -> FIRAuth {
-		if fbAuth.isEqual(nil) {
+		if fbAuth == nil {
 			fbAuth = FIRAuth.auth()
 		}
 
@@ -24,12 +26,22 @@ class FirebaseManager {
 	}
 
 	public static func getFbDatabase() -> FIRDatabase {
-		if fbDatabase.isEqual(nil) {
+		if fbDatabase == nil {
 			fbDatabase = FIRDatabase.database()
 			fbDatabase.persistenceEnabled = true
 		}
 
 		return fbDatabase
+	}
+
+	public static func logout() -> Bool {
+		do {
+			try getFbAuth().signOut()
+			return true
+		} catch let signOutError as NSError {
+			print(TAG + ":logout: " + signOutError.debugDescription)
+			return false
+		}
 	}
 
 }

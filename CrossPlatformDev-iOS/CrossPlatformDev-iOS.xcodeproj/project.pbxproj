@@ -16,6 +16,11 @@
 		0924445D1E2451B900E9A5A2 /* CrossPlatformDev_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924445C1E2451B900E9A5A2 /* CrossPlatformDev_iOSUITests.swift */; };
 		0924446B1E24527C00E9A5A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0924446A1E24527C00E9A5A2 /* GoogleService-Info.plist */; };
 		092A84E11E247F050050A85E /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A84E01E247F050050A85E /* FirebaseManager.swift */; };
+		09C7E21F1E258D40000D4E95 /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C7E21E1E258D40000D4E95 /* AppUtils.swift */; };
+		09C7E2211E259AED000D4E95 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C7E2201E259AED000D4E95 /* NavigationViewController.swift */; };
+		09C7E2231E259BEF000D4E95 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C7E2221E259BEF000D4E95 /* TaskListViewController.swift */; };
+		09C7E2261E25C3FD000D4E95 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C7E2241E25C3FD000D4E95 /* TableViewCell.swift */; };
+		09C7E2271E25C3FD000D4E95 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C7E2251E25C3FD000D4E95 /* TableViewCell.xib */; };
 		48C7A35FB5AE72DB1679AFD2 /* Pods_CrossPlatformDev_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 968DF9B3221AB9190B6F2095 /* Pods_CrossPlatformDev_iOSUITests.framework */; };
 		98E5D5E75F2DA36BAEF2F285 /* Pods_CrossPlatformDev_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E4B23BAA7BE8B735E67F0E /* Pods_CrossPlatformDev_iOSTests.framework */; };
 		C660AAFE8F9A51F8D70D6113 /* Pods_CrossPlatformDev_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC1402FEF9CD157A0C6B072 /* Pods_CrossPlatformDev_iOS.framework */; };
@@ -54,6 +59,11 @@
 		0924445E1E2451B900E9A5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0924446A1E24527C00E9A5A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		092A84E01E247F050050A85E /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		09C7E21E1E258D40000D4E95 /* AppUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
+		09C7E2201E259AED000D4E95 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		09C7E2221E259BEF000D4E95 /* TaskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		09C7E2241E25C3FD000D4E95 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		09C7E2251E25C3FD000D4E95 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		32BEF15BA88AECA2C531DB87 /* Pods-CrossPlatformDev-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossPlatformDev-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrossPlatformDev-iOSTests/Pods-CrossPlatformDev-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		51E4B23BAA7BE8B735E67F0E /* Pods_CrossPlatformDev_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrossPlatformDev_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53108C2833C2C1E055D3EBDB /* Pods-CrossPlatformDev-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossPlatformDev-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrossPlatformDev-iOS/Pods-CrossPlatformDev-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				0924443E1E2451B900E9A5A2 /* LoginRegisterViewController.swift */,
+				09C7E2201E259AED000D4E95 /* NavigationViewController.swift */,
+				09C7E2221E259BEF000D4E95 /* TaskListViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -161,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				092A84E01E247F050050A85E /* FirebaseManager.swift */,
+				09C7E21E1E258D40000D4E95 /* AppUtils.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -168,6 +181,8 @@
 		092A84DF1E247D240050A85E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				09C7E2241E25C3FD000D4E95 /* TableViewCell.swift */,
+				09C7E2251E25C3FD000D4E95 /* TableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -272,6 +287,7 @@
 				TargetAttributes = {
 					092444381E2451B900E9A5A2 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9QBC7ZE37G;
 						ProvisioningStyle = Automatic;
 					};
 					0924444C1E2451B900E9A5A2 = {
@@ -312,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				092444471E2451B900E9A5A2 /* LaunchScreen.storyboard in Resources */,
+				09C7E2271E25C3FD000D4E95 /* TableViewCell.xib in Resources */,
 				0924446B1E24527C00E9A5A2 /* GoogleService-Info.plist in Resources */,
 				092444441E2451B900E9A5A2 /* Assets.xcassets in Resources */,
 				092444421E2451B900E9A5A2 /* Main.storyboard in Resources */,
@@ -480,6 +497,10 @@
 				092A84E11E247F050050A85E /* FirebaseManager.swift in Sources */,
 				0924443F1E2451B900E9A5A2 /* LoginRegisterViewController.swift in Sources */,
 				0924443D1E2451B900E9A5A2 /* AppDelegate.swift in Sources */,
+				09C7E2211E259AED000D4E95 /* NavigationViewController.swift in Sources */,
+				09C7E21F1E258D40000D4E95 /* AppUtils.swift in Sources */,
+				09C7E2261E25C3FD000D4E95 /* TableViewCell.swift in Sources */,
+				09C7E2231E259BEF000D4E95 /* TaskListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +653,7 @@
 			baseConfigurationReference = 53108C2833C2C1E055D3EBDB /* Pods-CrossPlatformDev-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9QBC7ZE37G;
 				INFOPLIST_FILE = "CrossPlatformDev-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gover.zachary.CrossPlatformDev-iOS";
@@ -645,6 +667,7 @@
 			baseConfigurationReference = 7489C85234D0B85751E09615 /* Pods-CrossPlatformDev-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9QBC7ZE37G;
 				INFOPLIST_FILE = "CrossPlatformDev-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gover.zachary.CrossPlatformDev-iOS";
