@@ -17,7 +17,7 @@ class TaskListViewController: UITableViewController {
         super.viewDidLoad()
 
 		// Setup default properties
-		self.navigationItem.rightBarButtonItem = self.editButtonItem
+		//self.navigationItem.rightBarButtonItem = self.editButtonItem
 		tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "cellIdentifier")
 
 		// Listen for new tasks in the Firebase database

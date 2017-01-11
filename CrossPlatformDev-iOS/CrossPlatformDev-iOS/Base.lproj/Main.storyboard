@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -133,18 +132,16 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Task List" id="zJ9-Bb-1l9">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Op2-uD-65L"/>
-                        <leftBarButtonItems>
-                            <barButtonItem systemItem="add" id="0v2-Hy-B6x">
-                                <connections>
-                                    <segue destination="MyL-e0-GOp" kind="show" id="zuz-fD-Ses"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Logout" id="SWV-Ys-FcJ">
-                                <connections>
-                                    <action selector="logout:" destination="8Ve-wY-zt3" id="4Sw-Bc-kJf"/>
-                                </connections>
-                            </barButtonItem>
-                        </leftBarButtonItems>
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="0v2-Hy-B6x">
+                            <connections>
+                                <segue destination="MyL-e0-GOp" kind="show" id="zuz-fD-Ses"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="SWV-Ys-FcJ">
+                            <connections>
+                                <action selector="logout:" destination="8Ve-wY-zt3" id="4Sw-Bc-kJf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
