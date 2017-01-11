@@ -13,22 +13,33 @@ class Task {
 
 	public static let OBJECT_NAME: String = "tasks"
 
+	private var key: String!
 	private var name: String!
 	private var amount: Int!
 	private var createdDate: Int64!
 
 	public init() {}
 
-	public init(name: String, amount: Int, createdDate: Int64) {
+	public init(key: String, name: String, amount: Int, createdDate: Int64) {
+		self.key = key
 		self.name = name
 		self.amount = amount
 		self.createdDate = createdDate
 	}
 
 	public init(snapshot: FIRDataSnapshot) {
+		self.key = snapshot.key
 		self.name = snapshot.childSnapshot(forPath: "name").value as? String
 		self.amount = snapshot.childSnapshot(forPath: "amount").value as? Int
 		self.createdDate = snapshot.childSnapshot(forPath: "createdDate").value as? Int64
+	}
+
+	public func getKey() -> String {
+		return self.key
+	}
+
+	public func setKey(key: String) {
+		self.key = key
 	}
 
 	public func getName() -> String {

@@ -72,10 +72,12 @@ class FirebaseManager {
 	}
 
 	public static func logout(view: UIViewController) {
-		// Try to sign out of the Firebase account
+		// Try to sign out of the Firebase account and present login/register view controller
 		do {
 			try getFbAuth().signOut()
-			view.present(LoginRegisterViewController(), animated: true, completion: nil)
+			let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+			let vc: UIViewController = mainStoryboard.instantiateInitialViewController() as! LoginRegisterViewController
+			view.present(vc, animated: true, completion: nil)
 		} catch let signOutError as NSError {
 			print(TAG + ":logout: " + signOutError.debugDescription)
 			AppUtils.showAlertNotification(title: "Error", message: "There was an error logging out", context: view)
