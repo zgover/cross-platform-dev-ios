@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Firebase
 
 class TaskListViewController: UITableViewController {
+
+	private var tasks: [Task] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,8 +19,21 @@ class TaskListViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
+		// Setup default properties
+		self.navigationItem.rightBarButtonItem = self.editButtonItem
+		tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "cellIdentifier")
+
+		// Listen for new tasks in the Firebase database
+		FirebaseManager.getUserDbTaskReference().observe(.childAdded, with: { (snapshot) -> Void in
+			self.tasks.append(Task.init(snapshot: snapshot))
+			self.tableView.insertRows(at: [IndexPath(row: self.tasks.count-1, section: 0)], with: UITableViewRowAnimation.automatic)
+		})
+//		// Listen for deleted tasks in the Firebase database
+//		FirebaseManager.getUserDbTaskReference().observe(.childRemoved, with: { (snapshot) -> Void in
+//			let index: Int = self.indexOfMessage(snapshot)
+//			self.tasks.remove(at: index)
+//			self.tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: UITableViewRowAnimation.automatic)
+//		})
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,14 +44,21 @@ class TaskListViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int { return 1 }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return tasks.count
     }
+
+	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 60
+	}
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		// Configure the cell...
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! TableViewCell
+		let cell: TableViewCell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! TableViewCell
+		let task: Task = tasks[indexPath.row]
 
-		
+		cell.taskName.text = task.getName()
+		cell.taskAmount.text = "\(task.getAmount())"
+		cell.taskCreatedDate.text = task.getShortCreatedDate()
 
         return cell
     }

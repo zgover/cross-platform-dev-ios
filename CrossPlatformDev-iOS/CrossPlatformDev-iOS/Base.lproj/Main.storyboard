@@ -133,13 +133,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8H-Fb-edl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708" y="139"/>
+            <point key="canvasLocation" x="1647" y="139"/>
         </scene>
         <!--Navigation View Controller-->
         <scene sceneID="LpR-Ah-jKY">
             <objects>
                 <navigationController id="gxX-iI-48E" customClass="NavigationViewController" customModule="CrossPlatformDev_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gnp-FN-9VN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gnp-FN-9VN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -149,7 +149,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9OF-n6-y2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="916" y="139"/>
+            <point key="canvasLocation" x="908" y="139"/>
         </scene>
     </scenes>
 </document>

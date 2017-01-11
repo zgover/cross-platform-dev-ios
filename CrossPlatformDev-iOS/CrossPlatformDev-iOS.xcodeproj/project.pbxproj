@@ -135,8 +135,8 @@
 				092A84DD1E247D050050A85E /* Controllers */,
 				0924443C1E2451B900E9A5A2 /* AppDelegate.swift */,
 				092444401E2451B900E9A5A2 /* Main.storyboard */,
-				092444431E2451B900E9A5A2 /* Assets.xcassets */,
 				092444451E2451B900E9A5A2 /* LaunchScreen.storyboard */,
+				092444431E2451B900E9A5A2 /* Assets.xcassets */,
 				092444481E2451B900E9A5A2 /* Info.plist */,
 				0924446A1E24527C00E9A5A2 /* GoogleService-Info.plist */,
 			);

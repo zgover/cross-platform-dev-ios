@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="55.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CL-kg-aja">
@@ -26,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDj-SN-YwQ">
-                        <rect key="frame" x="8" y="31" width="216" height="18"/>
+                        <rect key="frame" x="8" y="31" width="216" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.57537864491636526" green="0.57313368488701888" blue="0.58474336139896366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -48,6 +48,7 @@
                     <constraint firstItem="R9o-MC-yvT" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.25" id="SkE-2H-LXv"/>
                     <constraint firstItem="eDj-SN-YwQ" firstAttribute="centerX" secondItem="8CL-kg-aja" secondAttribute="centerX" id="Vmc-kI-uIf"/>
                     <constraint firstItem="R9o-MC-yvT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="nQp-6u-Ml0"/>
+                    <constraint firstItem="eDj-SN-YwQ" firstAttribute="height" secondItem="8CL-kg-aja" secondAttribute="height" id="q8P-9c-6kH"/>
                     <constraint firstItem="eDj-SN-YwQ" firstAttribute="width" secondItem="8CL-kg-aja" secondAttribute="width" id="uVD-HH-qB6"/>
                 </constraints>
             </tableViewCellContentView>
