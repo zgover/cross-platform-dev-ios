@@ -32,9 +32,10 @@ class TaskListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath)
+		// Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! TableViewCell
 
-        // Configure the cell...
+		
 
         return cell
     }

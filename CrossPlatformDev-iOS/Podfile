@@ -9,6 +9,7 @@ target 'CrossPlatformDev-iOS' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
+  pod 'FirebaseUI'
 
   target 'CrossPlatformDev-iOSTests' do
     inherit! :search_paths
