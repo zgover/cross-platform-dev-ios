@@ -10,6 +10,9 @@ import UIKit
 
 class FormViewController: UIViewController {
 
+	@IBOutlet weak var nameField: UITextField!
+	@IBOutlet weak var amountField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
