@@ -89,15 +89,19 @@ class FirebaseManager {
 		let ref: FIRDatabaseReference = getFbDbReference().child(getUserId())
 			.child(Task.OBJECT_NAME).childByAutoId()
 
-		ref.updateChildValues(["name" : task.getName,
-		                       "amount" : task.getAmount(),
-		                       "createdDate" : task.getCreatedDate()])
+		ref.updateChildValues([NSString.init(string: "name") : task.getName(),
+		                       NSString.init(string: "amount") : task.getAmount(),
+		                       NSString.init(string: "createdDate") : task.getCreatedDate()])
 		{ (error, dbRef) in
 			if error != nil {
 				print(TAG + ":createNewTask:updateChildValues: " + error.debugDescription)
 				AppUtils.showAlertNotification(title: "Error", message: "There was an error creating the task", context: view)
 				return
 			}
+
+			AppUtils.closeLoadingScreen()
+			//AppUtils.showAlertNotification(title: "Success", message: "The task has been created successfully", context: view)
+			view.navigationController!.popViewController(animated: true)
 		}
 	}
 

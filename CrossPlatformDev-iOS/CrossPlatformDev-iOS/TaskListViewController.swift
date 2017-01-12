@@ -53,7 +53,7 @@ class TaskListViewController: UITableViewController {
 		let cell: TableViewCell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! TableViewCell
 		let task: Task = tasks[indexPath.row]
 
-		cell.taskName.text = task.getName()
+		cell.taskName.text = task.getName() as String
 		cell.taskAmount.text = "\(task.getAmount())"
 		cell.taskCreatedDate.text = task.getShortCreatedDate()
 

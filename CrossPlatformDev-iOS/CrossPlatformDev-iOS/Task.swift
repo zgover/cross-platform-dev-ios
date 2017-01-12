@@ -14,13 +14,13 @@ class Task {
 	public static let OBJECT_NAME: String = "tasks"
 
 	private var key: String!
-	private var name: String!
-	private var amount: Int!
-	private var createdDate: Int64!
+	private var name: NSString!
+	private var amount: NSNumber!
+	private var createdDate: NSNumber!
 
 	public init() {}
 
-	public init(key: String, name: String, amount: Int, createdDate: Int64) {
+	public init(key: String, name: NSString, amount: NSNumber, createdDate: NSNumber) {
 		self.key = key
 		self.name = name
 		self.amount = amount
@@ -29,9 +29,9 @@ class Task {
 
 	public init(snapshot: FIRDataSnapshot) {
 		self.key = snapshot.key
-		self.name = snapshot.childSnapshot(forPath: "name").value as? String
-		self.amount = snapshot.childSnapshot(forPath: "amount").value as? Int
-		self.createdDate = snapshot.childSnapshot(forPath: "createdDate").value as? Int64
+		self.name = snapshot.childSnapshot(forPath: "name").value as? NSString
+		self.amount = snapshot.childSnapshot(forPath: "amount").value as? NSNumber
+		self.createdDate = snapshot.childSnapshot(forPath: "createdDate").value as? NSNumber
 	}
 
 	public func getKey() -> String {
@@ -42,23 +42,23 @@ class Task {
 		self.key = key
 	}
 
-	public func getName() -> String {
+	public func getName() -> NSString {
 		return self.name
 	}
 
 	public func setName(name: String) {
-		self.name = name
+		self.name = NSString.init(string: name)
 	}
 
-	public func getAmount() -> Int {
+	public func getAmount() -> NSNumber {
 		return self.amount
 	}
 
 	public func setAmount(amount: Int) {
-		self.amount = amount
+		self.amount = NSNumber.init(value: amount)
 	}
 
-	public func getCreatedDate() -> Int64 {
+	public func getCreatedDate() -> NSNumber {
 		return self.createdDate
 	}
 
@@ -72,7 +72,7 @@ class Task {
 	}
 
 	public func setCreatedDate(createdDate: Int64) {
-		self.createdDate = createdDate
+		self.createdDate = NSNumber.init(value: createdDate)
 	}
 
 }

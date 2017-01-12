@@ -248,7 +248,7 @@
         <scene sceneID="LpR-Ah-jKY">
             <objects>
                 <navigationController id="gxX-iI-48E" customClass="NavigationViewController" customModule="CrossPlatformDev_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gnp-FN-9VN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gnp-FN-9VN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
