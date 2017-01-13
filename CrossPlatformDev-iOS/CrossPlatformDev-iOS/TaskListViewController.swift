@@ -67,8 +67,12 @@ class TaskListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-			//tableView.deleteRows(at: [indexPath], with: .fade)
-			FirebaseManager.deleteTask(key: tasks[indexPath.row].getKey())
+			let alert = UIAlertController(title: "Are you sure?", message: "Are you sure you would like to delete this item?", preferredStyle: .alert)
+			alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+			alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action) in
+				FirebaseManager.deleteTask(key: self.tasks[indexPath.row].getKey())
+			}))
+			self.present(alert, animated: true, completion: nil)
         }
     }
 
