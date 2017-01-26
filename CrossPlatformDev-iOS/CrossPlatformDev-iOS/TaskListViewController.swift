@@ -15,7 +15,7 @@ class TaskListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		self.tableView.reloadData()
 		// Setup default properties
 		//self.navigationItem.rightBarButtonItem = self.editButtonItem
 		tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "cellIdentifier")
@@ -31,6 +31,7 @@ class TaskListViewController: UITableViewController {
 			self.tasks.remove(at: index)
 			self.tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: UITableViewRowAnimation.automatic)
 		})
+		self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {

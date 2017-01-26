@@ -74,7 +74,13 @@ class LoginRegisterViewController: UIViewController {
 	}
 
 	private func openTaskListView() {
+		clearFields()
 		self.performSegue(withIdentifier: "toTaskListViewController", sender: nil)
+	}
+
+	private func clearFields() {
+		emailField.text = ""
+		passwordField.text = ""
 	}
 
 	private func formIsValid() -> Bool {

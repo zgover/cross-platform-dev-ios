@@ -19,6 +19,14 @@ class FirebaseManager {
 	private static var fbDbReference:FIRDatabaseReference!
 	private static var fbUserDbTaskReference:FIRDatabaseReference!
 
+	public static func destroy() {
+		//fbDatabase.goOffline()
+		fbAuth = nil
+		//fbDatabase = nil
+		//fbDbReference = nil
+		fbUserDbTaskReference = nil
+	}
+
 	public static func getFbAuth() -> FIRAuth {
 		// Return and/or create the auth instance
 		if fbAuth == nil {
@@ -75,9 +83,12 @@ class FirebaseManager {
 		// Try to sign out of the Firebase account and present login/register view controller
 		do {
 			try getFbAuth().signOut()
-			let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-			let vc: UIViewController = mainStoryboard.instantiateInitialViewController() as! LoginRegisterViewController
-			view.present(vc, animated: true, completion: nil)
+//			let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//			let vc: UIViewController = mainStoryboard.instantiateInitialViewController() as! LoginRegisterViewController
+			destroy()
+			view.dismiss(animated: true, completion: nil)
+			view.navigationController!.dismiss(animated: true, completion: nil)
+			//view.present(vc, animated: true, completion: nil)
 		} catch let signOutError as NSError {
 			print(TAG + ":logout: " + signOutError.debugDescription)
 			AppUtils.showAlertNotification(title: "Error", message: "There was an error logging out", context: view)
