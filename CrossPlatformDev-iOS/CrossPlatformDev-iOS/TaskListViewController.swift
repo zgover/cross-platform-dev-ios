@@ -31,7 +31,18 @@ class TaskListViewController: UITableViewController {
 			self.tasks.remove(at: index)
 			self.tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: UITableViewRowAnimation.automatic)
 		})
+		// Listen for edited tasks in the Firebase database
+		FirebaseManager.getUserDbTaskReference().queryOrdered(byChild: "createdDate").observe(.childChanged, with: { (snapshot) -> Void in
+			let index: Int = self.indexOfMessage(snapshot: snapshot)
+			let task: Task = Task.init(snapshot: snapshot)
+			self.tasks[index] = task
+			self.tableView.reloadData()
+		})
 		self.tableView.reloadData()
+
+		if (!Network.isConnected()) {
+			AppUtils.showAlertNotification(title: "Network Error", message: "Error updating list, please connect to a network.", context: self)
+		}
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,6 +88,24 @@ class TaskListViewController: UITableViewController {
         }
     }
 
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		// Set the method and open the controller
+		let task = tasks[indexPath.row]
+
+		FormViewController.method = FormViewController.EDIT
+		FormViewController.task = task
+
+		self.performSegue(withIdentifier: "toFormViewController", sender: nil)
+	}
+
+	@IBAction func createTask(_ sender: UIBarButtonItem) {
+		// Set the method and open the controller
+		FormViewController.method = FormViewController.CREATE
+		FormViewController.task = nil
+
+		self.performSegue(withIdentifier: "toFormViewController", sender: nil)
+	}
+	
 	@IBAction func logout(_ sender: UIBarButtonItem) {
 		FirebaseManager.logout(view: self)
 	}

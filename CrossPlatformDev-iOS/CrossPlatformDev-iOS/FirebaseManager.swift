@@ -102,8 +102,7 @@ class FirebaseManager {
 
 		ref.updateChildValues([NSString.init(string: "name") : task.getName(),
 		                       NSString.init(string: "amount") : task.getAmount(),
-		                       NSString.init(string: "createdDate") : task.getCreatedDate()])
-		{ (error, dbRef) in
+		                       NSString.init(string: "createdDate") : task.getCreatedDate()]) { (error, dbRef) in
 			if error != nil {
 				print(TAG + ":createNewTask:updateChildValues: " + error.debugDescription)
 				AppUtils.showAlertNotification(title: "Error", message: "There was an error creating the task", context: view)
@@ -112,6 +111,35 @@ class FirebaseManager {
 
 			AppUtils.closeLoadingScreen()
 			//AppUtils.showAlertNotification(title: "Success", message: "The task has been created successfully", context: view)
+			view.navigationController!.popViewController(animated: true)
+		}
+	}
+
+	public static func saveTask(task: Task, view: UIViewController) {
+		// Push to get a new key, assign  the values and update the children
+		let ref: FIRDatabaseReference = getFbDbReference().child(getUserId())
+			.child(Task.OBJECT_NAME).child(task.getKey())
+
+		ref.updateChildValues([NSString.init(string: "name") : task.getName(),
+		                       NSString.init(string: "amount") : task.getAmount(),
+		                       NSString.init(string: "createdDate") : task.getCreatedDate()]) { (error, dbRef) in
+			if error != nil {
+				print(TAG + ":saveTask:updateChildValues: " + error.debugDescription)
+				AppUtils.closeLoadingScreen()
+				AppUtils.showAlertNotification(title: "Error", message: "There was an error saving the task", context: view)
+				return
+			}
+
+			AppUtils.closeLoadingScreen()
+			//AppUtils.showAlertNotification(title: "Success", message: "The task has been created successfully", context: view)
+
+			if let controller = view as? FormViewController {
+				controller.nameField.text = ""
+				controller.amountField.text = ""
+				FormViewController.method = FormViewController.CREATE
+				FormViewController.task = nil
+			}
+
 			view.navigationController!.popViewController(animated: true)
 		}
 	}

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		091EFEFF1E3AC5C800B5147E /* TaskUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091EFEFE1E3AC5C800B5147E /* TaskUtils.swift */; };
+		091EFF011E3AEC8200B5147E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091EFF001E3AEC8200B5147E /* Network.swift */; };
 		0924443D1E2451B900E9A5A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924443C1E2451B900E9A5A2 /* AppDelegate.swift */; };
 		0924443F1E2451B900E9A5A2 /* LoginRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924443E1E2451B900E9A5A2 /* LoginRegisterViewController.swift */; };
 		092444421E2451B900E9A5A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 092444401E2451B900E9A5A2 /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		091EFEFE1E3AC5C800B5147E /* TaskUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskUtils.swift; sourceTree = "<group>"; };
+		091EFF001E3AEC8200B5147E /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		092444391E2451B900E9A5A2 /* CrossPlatformDev-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CrossPlatformDev-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0924443C1E2451B900E9A5A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0924443E1E2451B900E9A5A2 /* LoginRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 				092A84E01E247F050050A85E /* FirebaseManager.swift */,
 				09C7E21E1E258D40000D4E95 /* AppUtils.swift */,
 				09C7E2281E25CE0C000D4E95 /* Task.swift */,
+				091EFEFE1E3AC5C800B5147E /* TaskUtils.swift */,
+				091EFF001E3AEC8200B5147E /* Network.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -504,6 +510,8 @@
 				09C7E2291E25CE0C000D4E95 /* Task.swift in Sources */,
 				092A84E11E247F050050A85E /* FirebaseManager.swift in Sources */,
 				0924443F1E2451B900E9A5A2 /* LoginRegisterViewController.swift in Sources */,
+				091EFEFF1E3AC5C800B5147E /* TaskUtils.swift in Sources */,
+				091EFF011E3AEC8200B5147E /* Network.swift in Sources */,
 				0924443D1E2451B900E9A5A2 /* AppDelegate.swift in Sources */,
 				09C7E2211E259AED000D4E95 /* NavigationViewController.swift in Sources */,
 				09C7E21F1E258D40000D4E95 /* AppUtils.swift in Sources */,

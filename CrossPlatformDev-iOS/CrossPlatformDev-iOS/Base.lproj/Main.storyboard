@@ -134,7 +134,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="Op2-uD-65L"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="0v2-Hy-B6x">
                             <connections>
-                                <segue destination="MyL-e0-GOp" kind="show" id="zuz-fD-Ses"/>
+                                <action selector="createTask:" destination="8Ve-wY-zt3" id="AkZ-n8-U3E"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="SWV-Ys-FcJ">
@@ -144,6 +144,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="MyL-e0-GOp" kind="show" identifier="toFormViewController" id="Dla-zc-ZRJ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8H-Fb-edl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -178,6 +181,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="MyL-e0-GOp" id="2QV-cE-deL"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4p-8P-vZJ">
                                                 <rect key="frame" x="16" y="88" width="343" height="21"/>
@@ -190,6 +196,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="MyL-e0-GOp" id="xG3-Fe-FRf"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -248,7 +257,7 @@
         <scene sceneID="LpR-Ah-jKY">
             <objects>
                 <navigationController id="gxX-iI-48E" customClass="NavigationViewController" customModule="CrossPlatformDev_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gnp-FN-9VN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gnp-FN-9VN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
